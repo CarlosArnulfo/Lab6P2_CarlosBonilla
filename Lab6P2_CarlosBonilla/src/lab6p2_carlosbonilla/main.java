@@ -3,7 +3,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
 package lab6p2_carlosbonilla;
-
+import javax.swing.JOptionPane;
 /**
  *
  * @author lospe
@@ -33,6 +33,7 @@ public class main extends javax.swing.JFrame {
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
         posicion = new javax.swing.JComboBox<>();
+        btn_addplayer = new javax.swing.JButton();
         crearequipo = new javax.swing.JFrame();
         jPanel2 = new javax.swing.JPanel();
         btn_addTeam = new javax.swing.JButton();
@@ -79,26 +80,38 @@ public class main extends javax.swing.JFrame {
             }
         });
 
+        btn_addplayer.setText("agregar  jugador");
+        btn_addplayer.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btn_addplayerActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout crearplayerLayout = new javax.swing.GroupLayout(crearplayer.getContentPane());
         crearplayer.getContentPane().setLayout(crearplayerLayout);
         crearplayerLayout.setHorizontalGroup(
             crearplayerLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(crearplayerLayout.createSequentialGroup()
-                .addGap(63, 63, 63)
                 .addGroup(crearplayerLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(crearplayerLayout.createSequentialGroup()
-                        .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(117, 117, 117)
-                        .addComponent(Nombre, javax.swing.GroupLayout.PREFERRED_SIZE, 177, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(63, 63, 63)
+                        .addGroup(crearplayerLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(crearplayerLayout.createSequentialGroup()
+                                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(117, 117, 117)
+                                .addComponent(Nombre, javax.swing.GroupLayout.PREFERRED_SIZE, 177, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(crearplayerLayout.createSequentialGroup()
+                                .addGroup(crearplayerLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 64, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addGap(136, 136, 136)
+                                .addGroup(crearplayerLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(edad, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(posicion, javax.swing.GroupLayout.PREFERRED_SIZE, 85, javax.swing.GroupLayout.PREFERRED_SIZE)))))
                     .addGroup(crearplayerLayout.createSequentialGroup()
-                        .addGroup(crearplayerLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 64, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(136, 136, 136)
-                        .addGroup(crearplayerLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(edad, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(posicion, javax.swing.GroupLayout.PREFERRED_SIZE, 85, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                .addContainerGap(338, Short.MAX_VALUE))
+                        .addGap(180, 180, 180)
+                        .addComponent(btn_addplayer)))
+                .addContainerGap(38, Short.MAX_VALUE))
         );
         crearplayerLayout.setVerticalGroup(
             crearplayerLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -115,7 +128,9 @@ public class main extends javax.swing.JFrame {
                 .addGroup(crearplayerLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabel3)
                     .addComponent(posicion, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(148, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(btn_addplayer)
+                .addGap(72, 72, 72))
         );
 
         jPanel2.setBackground(new java.awt.Color(0, 0, 255));
@@ -209,7 +224,7 @@ public class main extends javax.swing.JFrame {
         jTree1.setModel(new javax.swing.tree.DefaultTreeModel(treeNode1));
         jScrollPane1.setViewportView(jTree1);
 
-        btn_transferir.setText("jButton1");
+        btn_transferir.setText("Transferir Jugador");
 
         javax.swing.GroupLayout transferirLayout = new javax.swing.GroupLayout(transferir.getContentPane());
         transferir.getContentPane().setLayout(transferirLayout);
@@ -218,9 +233,9 @@ public class main extends javax.swing.JFrame {
             .addGroup(transferirLayout.createSequentialGroup()
                 .addGap(71, 71, 71)
                 .addComponent(list1, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(90, 90, 90)
-                .addComponent(btn_transferir, javax.swing.GroupLayout.PREFERRED_SIZE, 73, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 106, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 78, Short.MAX_VALUE)
+                .addComponent(btn_transferir)
+                .addGap(68, 68, 68)
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 202, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(84, 84, 84))
         );
@@ -234,8 +249,8 @@ public class main extends javax.swing.JFrame {
                 .addContainerGap(89, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, transferirLayout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(btn_transferir)
-                .addGap(234, 234, 234))
+                .addComponent(btn_transferir, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(225, 225, 225))
         );
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -337,6 +352,14 @@ public class main extends javax.swing.JFrame {
         crearequipo.setVisible(true);
         crearplayer.setVisible(false);    }//GEN-LAST:event_btn_equipoActionPerformed
 
+    private void btn_addplayerActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_addplayerActionPerformed
+        if (Nombre.getText().equals(null)) {
+            JOptionPane.showMessageDialog(this, "Ingrese un nombre para el jugador");
+        }else{
+            
+        }
+    }//GEN-LAST:event_btn_addplayerActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -375,6 +398,7 @@ public class main extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JTextField Nombre;
     private javax.swing.JButton btn_addTeam;
+    private javax.swing.JButton btn_addplayer;
     private javax.swing.JButton btn_crearplayer;
     private javax.swing.JButton btn_equipo;
     private javax.swing.JButton btn_trans;

@@ -356,7 +356,7 @@ public class main extends javax.swing.JFrame {
         if (Nombre.getText().equals(null)) {
             JOptionPane.showMessageDialog(this, "Ingrese un nombre para el jugador");
         }else{
-            
+         //*   
         }
     }//GEN-LAST:event_btn_addplayerActionPerformed
 
